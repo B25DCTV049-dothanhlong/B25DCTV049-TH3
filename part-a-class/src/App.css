@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f2eb;
+  color: #292524;
+  padding: 24px 16px;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #2f4f46;
+  color: #faf8f5;
+  padding: 15px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(47, 79, 70, 0.16);
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 1.28rem;
+  font-weight: 700;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header span {
+  background: rgba(255, 255, 255, 0.14);
+  padding: 5px 11px;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.header button {
+  background: #f5f2eb;
+  color: #2f4f46;
+  border: none;
+  padding: 6px 13px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background: #ffffff;
+}
+
+/* Bố cục 2 cột */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+
+.left-col {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e7e2d8;
+  border-top: 4px solid #3f6b5e;
+  box-shadow: 0 2px 10px rgba(41, 37, 36, 0.04);
+}
+
+.col-title {
+  font-size: 1.02rem;
+  margin-bottom: 12px;
+  color: #2f4f46;
+}
+
+.left-col .row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-col input,
+.left-col select {
+  width: 100%;
+  padding: 9px 11px;
+  background: #faf9f6;
+  border: 1px solid #d6d0c4;
+  border-radius: 7px;
+  font-size: 0.92rem;
+  color: #292524;
+  outline: none;
+}
+
+.left-col input:focus,
+.left-col select:focus {
+  background: #ffffff;
+  border-color: #3f6b5e;
+  box-shadow: 0 0 0 3px rgba(63, 107, 94, 0.12);
+}
+
+.left-col button[type="submit"] {
+  width: 100%;
+  background: #3f6b5e;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.left-col button[type="submit"]:hover {
+  background: #2f4f46;
+}
+
+.error {
+  color: #b93838;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+
+.right-col .row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.right-col .row button {
+  background: #ffffff;
+  color: #57534e;
+  border: 1px solid #d6d0c4;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.right-col .row button:hover {
+  border-color: #3f6b5e;
+  color: #2f4f46;
+}
+
+.right-col .row button.active {
+  background: #3f6b5e;
+  color: #ffffff;
+  border-color: #3f6b5e;
+}
+
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ede6d6;
+  color: #443828;
+  padding: 12px 16px;
+  border: 1px solid #dfd5c0;
+  border-left: 4px solid #b47b44;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.total-row b {
+  font-size: 1.1rem;
+  color: #8c531e;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.expense-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 16px;
+  border: 1px solid #e7e2d8;
+  border-left: 4px solid #6b9080;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(41, 37, 36, 0.03);
+}
+
+.card-info strong {
+  display: block;
+  font-size: 0.96rem;
+  color: #1c1917;
+  margin-bottom: 4px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #78716c;
+}
+
+.tag {
+  background: #eaf1ee;
+  color: #2f4f46;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.card-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.amount {
+  font-weight: 700;
+  color: #2f4f46;
+}
+
+.card-right button {
+  background: #fbeaea;
+  color: #b93838;
+  border: none;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card-right button:hover {
+  background: #f7d6d6;
+}
+
+.empty {
+  text-align: center;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px dashed #d6d0c4;
+  border-radius: 10px;
+  color: #78716c;
+}
